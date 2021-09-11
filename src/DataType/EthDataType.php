@@ -53,7 +53,7 @@ abstract class EthDataType extends EthereumStatic implements EthDataTypeInterfac
         // The following elementary types exist:
         'uint' => 'EthQ',
         'int' => 'EthQ',
-        'address' => 'EthQ',
+        'address' => 'EthD20',
         // = uint 160?
         'bool' => 'EthB',
         // function, an address (20 bytes) followed by a function selector (4 bytes).

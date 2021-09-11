@@ -65,18 +65,19 @@ class Ethereum extends EthereumStatic implements Web3Interface
      * @param string $url
      *   Connection to Ethereum node. E.g:
      *   http://localhost:8545 or https://mainnet.infura.io/drupal.
+     * @param array $config
      */
-    public function __construct(string $url = 'http://localhost:8545')
+    public function __construct(string $url = 'http://localhost:8545', $config = [])
     {
       // Require the workaround helpers, as autoload files in composer
       //   doesn't work as expected.
       require_once __DIR__ . '/helpers/ethereum-client-workaround-helpers.php';
 
-      $this->client = RpcClient::factory($url, [
+      $this->client = RpcClient::factory($url, array_merge([
             // Debug JsonRPC requests.
             'debug'     => false,
             'rpc_error' => true,
-        ]);
+        ], $config));
 
         $this->definition = self::getDefinition();
 
