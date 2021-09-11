@@ -73,11 +73,11 @@ class Ethereum extends EthereumStatic implements Web3Interface
       //   doesn't work as expected.
       require_once __DIR__ . '/helpers/ethereum-client-workaround-helpers.php';
 
-      $this->client = RpcClient::factory($url, array_merge([
+      $this->client = RpcClient::factory($url, array_merge($config, [
             // Debug JsonRPC requests.
             'debug'     => false,
             'rpc_error' => true,
-        ], $config));
+        ]));
 
         $this->definition = self::getDefinition();
 
