@@ -133,16 +133,15 @@ class Ethereum extends EthereumStatic implements Web3Interface
                                 // Add value. Inconsistently booleans are not hexEncoded if they
                                 // are not data like in eth_getBlockByHash().
                                 if ($arg->isPrimitive() && $argType !== 'EthB') {
-
                                     if ($method === 'eth_getFilterChanges') {
                                         // Filter Id is an un-padded value :(
                                         $request_params[] = $arg->hexValUnpadded();
-                                    }
-                                    else {
+                                    } elseif ($method === 'personal_unlockAccount' && in_array($argType, ['EthS', 'EthQ'])) {
+                                        $request_params[] = $arg->val();
+                                    } else {
                                         $request_params[] = $arg->hexVal();
                                     }
-                                }
-                                elseif ($arg->isPrimitive() && $argType === 'EthB') {
+                                } elseif ($arg->isPrimitive() && $argType === 'EthB') {
                                     $request_params[] = $arg->val();
                                 }
                                 else {

@@ -50,6 +50,8 @@
     "eth_getWork": [[], ["D"]],
     "eth_submitWork": [["D", "D32", "D32"], "B", 3],
     "eth_submitHashrate": [["D", "D"], "B", 2],
+    "personal_lockAccount": [["D20"], "B"],
+    "personal_unlockAccount": [["D20", "S", "Q"], "B", 2],
     "db_putString": [["S", "S", "S"], "B", 2],
     "db_getString": [["S", "S"], "S", 2],
     "db_putHex": [["S", "S", "D"], "B", 2],
