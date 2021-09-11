@@ -1,5 +1,5 @@
 {
-  "name": "digitaldonkey/ethereum-php",
+  "name": "ihuangzhu/ethereum-php",
   "description": "A library integrating Ethereum with typed PHP.",
   "require": {
     "php": ">=7.1",
@@ -29,8 +29,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Thorsten Krug",
-      "email": "thorsten.krug@consensys.net"
+      "name": "ihuangzhu",
+      "email": "ihuangzhu@gmail.com"
     }
   ]
 }
