@@ -6,7 +6,8 @@
     "ext-json": "*",
     "pear/math_biginteger": "^1.0",
     "kornrunner/keccak": "^1.0",
-    "digitaldonkey/ecverify":"1.0"
+    "digitaldonkey/ecverify":"1.0",
+    "ihuangzhu/guzzle-jsonrpc": "dev-master"
   },
   "scripts": {
     "generate-methods": [
@@ -18,8 +19,7 @@
   },
   "require-dev": {
     "phpunit/phpunit": "^4.0 || ^5.0",
-    "gossi/php-code-generator": "^0.5.0",
-    "ihuangzhu/guzzle-jsonrpc": "dev-master"
+    "gossi/php-code-generator": "^0.5.0"
   },
   "autoload": {
     "psr-4": {
